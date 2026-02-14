@@ -107,12 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # init zoxide
 eval "$(zoxide init zsh)"
 
-# ESP-IDF
-# export IDF_PATH="$HOME/esp/master/esp-idf"
-# source "$IDF_PATH/export.sh"
-
-# fdfind
-alias fd='fdfind'
+# 环境变量与别名 (可选，由 dotfiles 软链)
+[ -f ~/.env.zsh ] && source ~/.env.zsh
+[ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
 
 # tmux terminal
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
