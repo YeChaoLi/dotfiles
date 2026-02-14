@@ -109,6 +109,9 @@ if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
+# fd: Debian/Ubuntu 包名为 fd-find，二进制是 fdfind
+command -v fdfind &>/dev/null && alias fd='fdfind'
+
 # 环境变量与别名 (可选，由 dotfiles 软链)
 [ -f ~/.env.zsh ] && source ~/.env.zsh
 [ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
