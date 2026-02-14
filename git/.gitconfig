@@ -1,0 +1,27 @@
+[user]
+	name = charles li
+	email = charles.lee@formlabs.com
+
+# refer to WinPC
+[core]
+	gitproxy = git-proxy
+	editor = code --wait
+[http]
+	sslVerify = false
+	proxy = http://127.0.0.1:1080
+[credential "http://144.34.186.52:16666"]
+	provider = generic
+	helper = store
+[credential "https://git.shuqixiao.site"]
+	provider = generic
+	helper = store
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[https]
+	proxy = http://127.0.0.1:1080
