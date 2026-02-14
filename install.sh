@@ -19,7 +19,7 @@ install_packages() {
   case "$ID" in
     ubuntu|debian)
       sudo apt-get update
-      sudo apt-get install -y git zsh tmux curl build-essential \
+      sudo apt-get install -y git vim zsh tmux curl build-essential \
         fzf fd-find ripgrep
       ;;
     rocky|centos|rhel|fedora)

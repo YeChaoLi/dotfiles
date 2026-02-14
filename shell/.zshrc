@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -104,8 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# init zoxide
-eval "$(zoxide init zsh)"
+# init zoxide (需先有 PATH 里的 ~/.local/bin)
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
 
 # 环境变量与别名 (可选，由 dotfiles 软链)
 [ -f ~/.env.zsh ] && source ~/.env.zsh
