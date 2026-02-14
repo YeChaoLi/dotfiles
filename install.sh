@@ -18,7 +18,10 @@ install_packages() {
 
   case "$ID" in
     ubuntu|debian)
+      echo "==> Updating system (apt update + full-upgrade)..."
       sudo apt-get update
+      sudo apt-get full-upgrade -y
+      echo "==> Installing packages..."
       sudo apt-get install -y git vim zsh tmux curl build-essential \
         fzf fd-find ripgrep
       ;;
